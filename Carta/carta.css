@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Cinzel Decorative', cursive;
+  background-image: url('principal\ 3.jpg'); /* fundo suave, céu ou pergaminho */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fundo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.folha {
+  background-image: url('folha.png'); /* imagem de papel antigo */
+  background-size: cover;
+  background-position: center;
+  width: 600px;
+  height: 80vh;
+  padding: 80px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+.texto-carta {
+  color: #3b2f2f;
+  text-shadow: 1px 1px 30px #f5e6c8;
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.8em;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* leve contraste interno */
+  border-radius: 10px;
+}
+
+.texto-carta h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.texto-carta p {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  white-space: center;
+}
+
+.folha {
+  overflow-y: auto;
+  scrollbar-width: thin;           /* Para Firefox */
+  scrollbar-color: #c084fc transparent;
+}
+
+/* Para navegadores WebKit (Chrome, Edge, Safari) */
+.folha::-webkit-scrollbar {
+  width: 6px;
+}
+
+.folha::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.folha::-webkit-scrollbar-thumb {
+  background-color: #c084fc;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}

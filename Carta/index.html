@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exposição Enrolados</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+</head>
+<body>
+  <audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio.
+</audio>
+
+
+  <div class="carta-realeza">
+  <p>“ Fiz um texto para você ontem, mas imaginei que não fosse o suficiente, então fiz algo melhor, pois você merece o melhor...”</p>
+</div>
+
+  <div class="galeria">
+    <div class="quadro">
+      <img src="Foto 1.jpg" alt="Foto 1">
+    </div>
+    <div class="quadro">
+      <img src="Foto 2.jpg" alt="Foto 2">
+    </div>
+    <div class="quadro">
+      <img src="Foto 3.jpg" alt="Foto 3">
+    </div>
+  </div>
+
+  <div class="botao-central">
+    <button onclick="window.location.href='galeria.html'">Para a Mulher que eu oro todos os dias</button>
+  </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("musica");
+
+    // Tenta tocar imediatamente
+    const playAudio = () => {
+      audio.play().catch(() => {
+        // Se falhar (por restrição do navegador), aguarda interação
+        document.body.addEventListener("click", () => {
+          audio.play();
+        }, { once: true });
+      });
+    };
+
+    playAudio();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeria Encantada</title>
+  <link rel="stylesheet" href="galeria.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+  <audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <h1 class="titulo">Essa galeria não é sobre o que foi — é sobre o que ainda sinto.</h1>
+
+  <div class="galeria">
+    <div class="item">
+      <img src="cena 1.jpg" alt="Cena 1">
+      <p>“e assim como o nascer do sol,
+amar voce é inevitavel.
+é onde começam os meus dias.
+é a minha primeira fonte de calor.
+
+nunca ouvi alguem perguntar <br>
+'' sera que o sol vai nascer , amanha?''
+
+mas caso voce se pergunte, a resposta é sim ,
+eu vou continuar amando voce amanhã”<br><br>
+- jwliars</p>
+    </div>
+    <div class="item">
+      <img src="cena 2.jpg" alt="Cena 2">
+      <p>“Ela é esperta, divertida, e...”<br>
+    "Bonita???"<br>
+    "Belíssima! Ela tem uns olhos que são... e o cabelo, puxa e o sorriso! Ahh"<br><br>
+- Alladin</p>
+    </div>
+    <div class="item">
+      <img src="cena 3.jpg" alt="Cena 3">
+      <p>“ Quero ver seu sorriso e saber da sua vida todo santo dia. 
+        Até chegar o momento em que todos os seus dias sejam inteiramente ao meu lado.”<br><br>
+    - Todo amor tem um final feliz</p>
+    </div>
+    <div class="item">
+      <img src="cena 4.jpg" alt="Cena 4">
+      <p>“O melhor amor é aquele que desperta a alma e nos faz querer mais, 
+        que acende o fogo em nossos corações e traz paz às nossas mentes. 
+        Foi isso que você me deu e é o que eu espero dar a você. 
+        Eu amo você e estarei te esperando."<br><br>
+    - Diário de uma paixão</p>
+    </div>
+    <div class="item">
+      <img src="cena 5.jpg" alt="Cena 5">
+      <p>“Eu diria que você é linda como uma estrela, mas prefiro compará-la à lua, tão singela.
+        Estrelas são muitas no vasto céu a brilharm mas como a lua, só você sabe iluminar.”<br><br> 
+    - Autor Desconhecido</p>
+    </div>
+    <div class="item">
+      <img src="cena 6.jpg" alt="Cena 6">
+      <p>“Eu nunca conheci ninguém... ninguém que achasse que eu era, bom o bastante, até te conhecer... 
+        e você me fez acreditar também.”<br><br>
+    - O amor e outras drogas</p>
+    </div>
+  </div>
+
+  <div class="popup" id="popup">
+  <span class="fechar" onclick="fecharPopup()">×</span>
+  <img id="popup-img" src="" alt="Foto ampliada">
+  <p id="popup-legenda"></p>
+</div>
+
+<script>
+  const itens = document.querySelectorAll('.item');
+  const popup = document.getElementById('popup');
+  const popupImg = document.getElementById('popup-img');
+  const popupLegenda = document.getElementById('popup-legenda');
+
+  itens.forEach(item => {
+    item.addEventListener('click', () => {
+      const imgSrc = item.querySelector('img').src;
+      const legenda = item.querySelector('p').textContent;
+      popupImg.src = imgSrc;
+      popupLegenda.textContent = legenda;
+      popup.classList.add('ativo');
+    });
+  });
+
+  function fecharPopup() {
+    popup.classList.remove('ativo');
+  }
+</script>
+
+<div class="botao-proximo">
+  <button onclick="window.location.href='carta.html'">Peça que leia... Por Favor...</button>
+</div>
+
+</body>
+</html>

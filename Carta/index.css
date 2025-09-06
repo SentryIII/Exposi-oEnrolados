@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: 'Cinzel Decorative', cursive;
+  background-image: url('principal.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(-2px);
+}
+
+.quadro {
+  width: 200px;
+  height: 280px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  text-align: center;
+}
+
+.quadro img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.quadro p {
+  font-size: 1em;
+  color: #333;
+  margin-top: 8px;
+}
+
+/* Botão lilás estrelado centralizado */
+.botao-central {
+  margin-top: 20px;
+}
+
+.botao-central button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background: linear-gradient(135deg, #d8b4f8, #c084fc);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(200, 130, 255, 0.6);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.botao-central button::before {
+  content: "✨";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 1.2em;
+  animation: brilhar 1.5s infinite alternate;
+}
+
+@keyframes brilhar {
+  0% { opacity: 0.3; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
+
+.botao-central button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(220, 160, 255, 0.8);
+}
+
+.carta-realeza {
+  position: absolute;
+  top: -10px; /* antes era 30px */
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+
+.carta-realeza p {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 1.4em;
+  color: #f5e6c8;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  text-shadow: 1px 1px 3px #000;
+  backdrop-filter: blur(3px);
+  animation: surgir 2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes surgir {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
